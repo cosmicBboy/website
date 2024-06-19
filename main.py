@@ -49,8 +49,7 @@ ABOUT_CONTENTS = """
     <p>
     The Critical Dream image generation model does its best to render what's
     happening in the episodes as they happen, but you'll notice weird
-    things like extra fingers, floating horns, nonsensical imagery, and
-    pointy-earred Caleb and Beau.
+    things like extra fingers, floating horns, and nonsensical imagery.
     </p>
 
     <p>
@@ -71,7 +70,7 @@ ABOUT_CONTENTS = """
     <p>
     This project is possible because of the amazing and talented artists who
     brought Critical Role's cast of characters to life. To create the Critical
-    Dream image generation model, I fined-tuned
+    Dream image generation model, I fine-tuned
     <a href="https://huggingface.co/papers/2307.01952" target="_blank">Stable Diffusion XL</a>
     on this art. I do not take this act lightly because
     <strong><i>
@@ -86,6 +85,12 @@ ABOUT_CONTENTS = """
     </p>
 
     <ul>
+        <li>
+        🎨 Based on early feedback, I have filtered the images to only be
+        those of the environment and to not use character-specific art on the
+        website until I get explicit permission from the artists.
+        </li>
+
         <li>
         🚫 I have not monetized this website, nor do I have any plans on monetizing
         it without some kind of revenue-sharing agreement in place with the
@@ -342,6 +347,7 @@ def load_data(episode_name: str) -> pd.DataFrame:
             scene_name=scene_name,
             mid_point=midpoint,
         )
+        .query("speaker == 'MATT'")
     )
 
 
