@@ -19,7 +19,7 @@ image_url_template = (
     "{episode_name}/{scene_name}_image_{image_num}.png"
 )
 
-APP_VERSION = "2024.06.22.1"
+APP_VERSION = "2024.06.22.2"
 
 NUM_IMAGE_VARIATIONS = 12
 NUM_IMAGE_SAMPLE_TRIES = 100
