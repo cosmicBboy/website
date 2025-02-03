@@ -158,7 +158,7 @@ def load_data(episode_name: str) -> pd.DataFrame:
             scene_name=scene_name,
             mid_point=midpoint,
         )
-        .query("speaker == 'MATT'")
+        # .query("speaker == 'MATT'")
     )
 
 
